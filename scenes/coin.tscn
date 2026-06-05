@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://byniag68rwbnh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kahox"]
+
+[node name="Coin" type="Area2D" unique_id=939269496]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=53575516]
+sprite_frames = SubResource("SpriteFrames_kahox")

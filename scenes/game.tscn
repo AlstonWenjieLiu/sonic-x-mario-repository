@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
 
 [ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1773793134]
 
@@ -14,6 +15,10 @@ format = 2
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
+
+[node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
+
+[node name="Area2D" type="Area2D" parent="Killzone" unique_id=2054273588]
 
 [node name="Collectibles" type="Node" parent="." unique_id=737882388]
 
@@ -31,12 +36,7 @@ position_smoothing_enabled = true
 
 [node name="Defense" type="Node" parent="Collectibles/Items/Equipments" unique_id=261286432]
 
-[node name="Collectibles" type="Node" parent="Collectibles/Items" unique_id=784503254]
-
-[node name="Killzone" type="Area2D" parent="." unique_id=1500959995]
-position = Vector2(2, -11)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1090328516]
+[node name="Treasures" type="Node" parent="Collectibles/Items" unique_id=784503254]
 
 [node name="Platforms" type="Node" parent="." unique_id=77416904]
 
