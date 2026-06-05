@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bo0yamhhd7iye" path="res://scenes/music.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=1773793134]
 
@@ -13,7 +14,7 @@ format = 2
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.75, 1.75)
 position_smoothing_enabled = true
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
@@ -43,3 +44,5 @@ position_smoothing_enabled = true
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
 [node name="Labels" type="Node" parent="." unique_id=2114729452]
+
+[node name="Music" parent="." unique_id=518075246 instance=ExtResource("3_lnu2h")]

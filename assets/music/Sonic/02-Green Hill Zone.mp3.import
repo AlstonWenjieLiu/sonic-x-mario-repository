@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5voc6v8y0js1"
+path="res://.godot/imported/02-Green Hill Zone.mp3-30da84e87a8f6e4103315e8a10954006.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Sonic/02-Green Hill Zone.mp3"
+dest_files=["res://.godot/imported/02-Green Hill Zone.mp3-30da84e87a8f6e4103315e8a10954006.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
