@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8cj0n"]
+[ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
 
 [node name="Game" type="Node2D" unique_id=1773793134]
 
@@ -9,13 +9,11 @@
 [node name="TileMap" type="TileMap" parent="." unique_id=655577397]
 format = 2
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=837335407]
+[node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=662406764]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1253809565]
-sprite_frames = SubResource("SpriteFrames_8cj0n")
 
 [node name="Collectibles" type="Node" parent="." unique_id=737882388]
 
@@ -36,6 +34,7 @@ sprite_frames = SubResource("SpriteFrames_8cj0n")
 [node name="Collectibles" type="Node" parent="Collectibles/Items" unique_id=784503254]
 
 [node name="Killzone" type="Area2D" parent="." unique_id=1500959995]
+position = Vector2(2, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1090328516]
 
