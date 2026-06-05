@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_8cj0n"]
+
 [node name="Game" type="Node2D" unique_id=1773793134]
 
 [node name="GameManager" type="Node" parent="." unique_id=412565543]
@@ -7,10 +9,38 @@
 [node name="TileMap" type="TileMap" parent="." unique_id=655577397]
 format = 2
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=837335407]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=837335407]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=662406764]
+position_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1253809565]
+sprite_frames = SubResource("SpriteFrames_8cj0n")
 
 [node name="Collectibles" type="Node" parent="." unique_id=737882388]
 
 [node name="Points" type="Node" parent="Collectibles" unique_id=1633209490]
 
+[node name="Rings" type="Node" parent="Collectibles/Points" unique_id=1111254255]
+
+[node name="Mario Coins" type="Node" parent="Collectibles/Points" unique_id=1083648077]
+
 [node name="Items" type="Node" parent="Collectibles" unique_id=271852803]
+
+[node name="Equipments" type="Node" parent="Collectibles/Items" unique_id=1563600949]
+
+[node name="Attack" type="Node" parent="Collectibles/Items/Equipments" unique_id=1458646474]
+
+[node name="Defense" type="Node" parent="Collectibles/Items/Equipments" unique_id=261286432]
+
+[node name="Collectibles" type="Node" parent="Collectibles/Items" unique_id=784503254]
+
+[node name="Killzone" type="Area2D" parent="." unique_id=1500959995]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1090328516]
+
+[node name="Platforms" type="Node" parent="." unique_id=77416904]
+
+[node name="Enemies" type="Node" parent="." unique_id=720590199]
+
+[node name="Labels" type="Node" parent="." unique_id=2114729452]
