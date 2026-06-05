@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://curna8hst8lkl"
-path="res://.godot/imported/Game Boy Advance - Sonic Advance 3 - Miscellaneous - All Rings.png-b45199c898e5b7cafa38130a0a64f9c3.ctex"
+uid="uid://cji40p1xbp5w4"
+path="res://.godot/imported/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring4.png-743fc6afbc3e99c02d14b17d4bd1426e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/items/points/Game Boy Advance - Sonic Advance 3 - Miscellaneous - All Rings.png"
-dest_files=["res://.godot/imported/Game Boy Advance - Sonic Advance 3 - Miscellaneous - All Rings.png-b45199c898e5b7cafa38130a0a64f9c3.ctex"]
+source_file="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring4.png"
+dest_files=["res://.godot/imported/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring4.png-743fc6afbc3e99c02d14b17d4bd1426e.ctex"]
 
 [params]
 
