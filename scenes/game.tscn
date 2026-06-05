@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
+
+[node name="Game" type="Node2D" unique_id=1773793134]
+
+[node name="GameManager" type="Node" parent="." unique_id=412565543]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=655577397]
+format = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=837335407]
+
+[node name="Collectibles" type="Node" parent="." unique_id=737882388]
+
+[node name="Points" type="Node" parent="Collectibles" unique_id=1633209490]
+
+[node name="Items" type="Node" parent="Collectibles" unique_id=271852803]
