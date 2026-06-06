@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dejhrrtd6stmd"]
+
+[ext_resource type="PackedScene" uid="uid://byv4brdjsn8tq" path="res://scenes/boundary_side.tscn" id="1_viule"]
+
+[node name="WorldBoundary" type="StaticBody2D" unique_id=1789907258]
+
+[node name="Bottom" parent="." unique_id=1890964188 instance=ExtResource("1_viule")]
+
+[node name="Left" parent="." unique_id=1930760007 instance=ExtResource("1_viule")]
+position = Vector2(0, -50)
+rotation = 1.5707964

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://byniag68rwbnh"]
+
+[ext_resource type="Script" uid="uid://coejvpu1p11yr" path="res://scripts/point.gd" id="1_dnso1"]
+[ext_resource type="Texture2D" uid="uid://dkwtil5mc7w5s" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring1.png" id="2_olwhu"]
+[ext_resource type="Texture2D" uid="uid://bo2cjbuju2j3d" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Rings2.png" id="3_n8ds4"]
+[ext_resource type="Texture2D" uid="uid://xt8787oolcfb" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Rings3.png" id="4_fqc5c"]
+[ext_resource type="Texture2D" uid="uid://cji40p1xbp5w4" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring4.png" id="5_8x4hd"]
+[ext_resource type="AudioStream" uid="uid://bxkhjasakh4d0" path="res://assets/sounds/sonic_rings.mp3" id="6_n1q2t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kahox"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_olwhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n8ds4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fqc5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8x4hd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.25
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d14el"]
+radius = 8.0
+
+[node name="Ring" type="Area2D" unique_id=939269496]
+script = ExtResource("1_dnso1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=53575516]
+sprite_frames = SubResource("SpriteFrames_kahox")
+autoplay = "default"
+frame_progress = 0.50141907
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1162523876]
+shape = SubResource("CircleShape2D_d14el")
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=1900129521]
+stream = ExtResource("6_n1q2t")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

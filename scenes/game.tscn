@@ -1,17 +1,21 @@
 [gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
 
+[ext_resource type="Script" uid="uid://dqni1kblntodj" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bo0yamhhd7iye" path="res://scenes/music.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dejhrrtd6stmd" path="res://scenes/world_boundary.tscn" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1773793134]
 
 [node name="GameManager" type="Node" parent="." unique_id=412565543]
+script = ExtResource("1_lbhrr")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=655577397]
 format = 2
 
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
+position = Vector2(150, -19)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
 zoom = Vector2(1.75, 1.75)
@@ -46,3 +50,5 @@ position_smoothing_enabled = true
 [node name="Labels" type="Node" parent="." unique_id=2114729452]
 
 [node name="Music" parent="." unique_id=518075246 instance=ExtResource("3_lnu2h")]
+
+[node name="WorldBoundary" parent="." unique_id=1789907258 instance=ExtResource("5_iywne")]

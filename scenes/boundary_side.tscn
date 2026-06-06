@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://byv4brdjsn8tq"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rlp6c"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rlp6c"]
+
+[node name="BoundarySide" type="CollisionShape2D" unique_id=1890964188]
+shape = SubResource("WorldBoundaryShape2D_rlp6c")
+
+[node name="Texture" type="Sprite2D" parent="." unique_id=1336472636]
+texture_repeat = 2
+position = Vector2(-2.3841858e-06, 0)
+scale = Vector2(123.99999, 1)
+texture = SubResource("PlaceholderTexture2D_rlp6c")
+region_enabled = true
+region_rect = Rect2(0, 0, 999999, 1)
