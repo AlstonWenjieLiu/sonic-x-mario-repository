@@ -2,33 +2,154 @@
 
 [ext_resource type="Script" uid="uid://dqni1kblntodj" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://cndsg26ijahvr" path="res://scenes/sunset_hill_tile_set.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://8ulik6vaieut" path="res://scenes/maps/sunset_hill_level_1.tscn" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://bjnaymhls1fnn" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://bo0yamhhd7iye" path="res://scenes/music.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cndsg26ijahvr" path="res://scenes/maps/sunset_hill_tile_set.tscn" id="3_vtaks"]
+[ext_resource type="Texture2D" path="res://assets/sprites/worlds/sonic/sonic_advance_3/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/2.png" id="4_kvpfn"]
+[ext_resource type="Texture2D" path="res://assets/sprites/worlds/sonic/sonic_advance_3/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/0.png" id="5_dinhu"]
+[ext_resource type="Texture2D" path="res://assets/sprites/worlds/sonic/sonic_advance_3/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/704.png" id="6_kvuet"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trtic"]
+texture = ExtResource("4_kvpfn")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir15t"]
+texture = ExtResource("5_dinhu")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca42v"]
+texture = ExtResource("6_kvuet")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="TileSet" id="TileSet_rysoc"]
+tile_size = Vector2i(96, 96)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_trtic")
+sources/1 = SubResource("TileSetAtlasSource_ir15t")
+sources/2 = SubResource("TileSetAtlasSource_ca42v")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 7, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 169, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 331, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 493, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 655, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 817, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
+atlas = ExtResource("3_iywne")
+region = Rect2(8, 979, 240, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvuet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p57ef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5sy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gee14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tnpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtaks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvpfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dinhu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D" unique_id=1773793134]
 
 [node name="GameManager" type="Node" parent="." unique_id=412565543]
 script = ExtResource("1_lbhrr")
 
-[node name="Maps" type="Node" parent="." unique_id=321003878]
+[node name="sunset_hill_level_1" parent="." unique_id=842018264 instance=ExtResource("2_p57ef")]
 
-[node name="Hub" type="Node" parent="Maps" unique_id=500976861]
-
-[node name="Levels" type="Node" parent="Maps" unique_id=219693165]
-
-[node name="SunsetHill2" type="Node" parent="Maps/Levels" unique_id=1089321949]
-
-[node name="SunsetHill" parent="Maps/Levels/SunsetHill2" unique_id=2080484911 instance=ExtResource("2_iywne")]
-layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, -1, 2, 0, -65537, 2, 0)
-
-[node name="Background" type="Sprite2D" parent="Maps/Levels/SunsetHill2" unique_id=1793757138]
+[node name="SunsetHillTileSet2" parent="sunset_hill_level_1" unique_id=2080484911 instance=ExtResource("3_vtaks")]
+tile_set = SubResource("TileSet_rysoc")
+collision_visibility_mode = 1
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 3, 0, 0, 4, 0, 0, 2, 0, 0, 5, 0, 0, 6, 0, 0, -1, 2, 0, -65537, 2, 0, -131073, 2, 0)
 
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
 position = Vector2(150, -19)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
 zoom = Vector2(1.75, 1.75)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player" unique_id=516275498]
+z_index = -3
+position = Vector2(18, -6)
+sprite_frames = SubResource("SpriteFrames_kvuet")
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
 

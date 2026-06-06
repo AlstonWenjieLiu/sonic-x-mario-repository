@@ -65,6 +65,7 @@ sources/1 = SubResource("TileSetAtlasSource_4xdx5")
 sources/2 = SubResource("TileSetAtlasSource_k6yb2")
 
 [node name="SunsetHillTileSet" type="TileMap" unique_id=2080484911]
+light_mask = 2
+visibility_layer = 2
 tile_set = SubResource("TileSet_4xdx5")
 format = 2
-layer_0/tile_data = PackedInt32Array(196610, 0, 0, 196616, 0, 0)

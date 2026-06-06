@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://8ulik6vaieut"]
+
+[ext_resource type="PackedScene" uid="uid://cndsg26ijahvr" path="res://scenes/maps/sunset_hill_tile_set.tscn" id="1_2trbt"]
+
+[node name="sunset_hill_level_1" type="Node2D" unique_id=842018264]
+
+[node name="SunsetHillTileSet" parent="." unique_id=2080484911 instance=ExtResource("1_2trbt")]
+collision_visibility_mode = 1
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 3, 0, 0, 4, 0, 0, 2, 0, 0, 5, 0, 0, 6, 0, 0, -1, 2, 0, -65537, 2, 0, -131073, 2, 0)
