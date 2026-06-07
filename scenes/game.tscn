@@ -92,6 +92,44 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_0tnpc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1104, 12)]
+}
+
+[sub_resource type="Animation" id="Animation_vtaks"]
+resource_name = "sideways"
+length = 2.0333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1104, 12), Vector2(1392, 12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kvpfn"]
+_data = {
+&"RESET": SubResource("Animation_0tnpc"),
+&"sideways": SubResource("Animation_vtaks")
+}
+
 [node name="Game" type="Node2D" unique_id=1773793134]
 
 [node name="GameManager" type="Node" parent="." unique_id=412565543]
@@ -100,7 +138,7 @@ script = ExtResource("1_lbhrr")
 [node name="TileMap" type="TileMap" parent="." unique_id=1640312727]
 tile_set = SubResource("TileSet_kvpfn")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0)
 
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
 position = Vector2(150, -19)
@@ -146,6 +184,16 @@ position = Vector2(-150, 19)
 
 [node name="Platform" parent="Platforms" unique_id=710371985 instance=ExtResource("8_0tnpc")]
 position = Vector2(335, -50)
+
+[node name="Platform2" parent="Platforms" unique_id=1677944383 instance=ExtResource("8_0tnpc")]
+position = Vector2(455, -11)
+
+[node name="Platform3" parent="Platforms" unique_id=359171396 instance=ExtResource("8_0tnpc")]
+position = Vector2(1104, 12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3" unique_id=1955753254]
+libraries/ = SubResource("AnimationLibrary_kvpfn")
+autoplay = &"RESET"
 
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
