@@ -72,6 +72,8 @@ sources/5 = SubResource("TileSetAtlasSource_rysoc")
 sources/6 = SubResource("TileSetAtlasSource_trtic")
 sources/7 = SubResource("TileSetAtlasSource_ssvqc")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ir15t"]
+
 [sub_resource type="Animation" id="Animation_0tnpc"]
 length = 3.0
 loop_mode = 2
@@ -277,15 +279,18 @@ position = Vector2(150, -19)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
 position = Vector2(3, 0)
 zoom = Vector2(1.5, 1.5)
+limit_bottom = 700
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Music" parent="Player" unique_id=518075246 instance=ExtResource("3_lnu2h")]
 position = Vector2(-150, 19)
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
+position = Vector2(300, 800)
 
-[node name="Area2D" type="Area2D" parent="Killzone" unique_id=2054273588]
-position = Vector2(37, -54)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1583465777]
+shape = SubResource("WorldBoundaryShape2D_ir15t")
 
 [node name="Collectibles" type="Node" parent="." unique_id=737882388]
 
