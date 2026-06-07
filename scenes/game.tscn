@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://gyacbdk6ymcu" path="res://scenes/maps/sunset_hill/platforms/grass_platform.tscn" id="8_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://wkgkfwm5es8i" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/375.png" id="8_kvuet"]
 [ext_resource type="Texture2D" uid="uid://dgtynvwd3rs4j" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/366_clear.png" id="9_trtic"]
+[ext_resource type="PackedScene" uid="uid://byniag68rwbnh" path="res://scenes/point.tscn" id="14_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
 texture = ExtResource("2_u5sy4")
@@ -72,7 +73,8 @@ sources/6 = SubResource("TileSetAtlasSource_trtic")
 sources/7 = SubResource("TileSetAtlasSource_ssvqc")
 
 [sub_resource type="Animation" id="Animation_0tnpc"]
-length = 2.6
+length = 3.0
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -84,6 +86,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1104, 12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:constant_linear_velocity")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vtaks"]
@@ -106,6 +120,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_trtic"]
 resource_name = "up and down"
 length = 3.0
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -116,14 +131,131 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1776, 316), Vector2(1776, 316)]
+"values": [Vector2(1776, 492), Vector2(1776, -372)]
+}
+
+[sub_resource type="Animation" id="Animation_ca42v"]
+resource_name = "up and down 2"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2304, -240), Vector2(2304, -528)]
+}
+
+[sub_resource type="Animation" id="Animation_rysoc"]
+resource_name = "up and down animation 3"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:constant_linear_velocity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 3.0001, 3.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kvpfn"]
 _data = {
 &"RESET": SubResource("Animation_0tnpc"),
 &"sideways": SubResource("Animation_vtaks"),
-&"up and down": SubResource("Animation_trtic")
+&"up and down": SubResource("Animation_trtic"),
+&"up and down 2": SubResource("Animation_ca42v"),
+&"up and down animation 3": SubResource("Animation_rysoc")
+}
+
+[sub_resource type="Animation" id="Animation_ir15t"]
+resource_name = "4"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2592, -240), Vector2(2592, -528)]
+}
+
+[sub_resource type="Animation" id="Animation_ssvqc"]
+resource_name = "5"
+length = 3.0
+
+[sub_resource type="Animation" id="Animation_264po"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2592, -240)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kice"]
+_data = {
+&"4": SubResource("Animation_ir15t"),
+&"5": SubResource("Animation_ssvqc"),
+&"RESET": SubResource("Animation_264po")
+}
+
+[sub_resource type="Animation" id="Animation_5newe"]
+resource_name = "5"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2880, -240), Vector2(2880, -624)]
+}
+
+[sub_resource type="Animation" id="Animation_37s47"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2880, -240)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bt5mj"]
+_data = {
+&"5": SubResource("Animation_5newe"),
+&"RESET": SubResource("Animation_37s47")
 }
 
 [node name="Game" type="Node2D" unique_id=1773793134]
@@ -134,7 +266,7 @@ script = ExtResource("1_lbhrr")
 [node name="TileMap" type="TileMap" parent="." unique_id=1640312727]
 tile_set = SubResource("TileSet_kvpfn")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 21, 0, 0, 22, 7, 0, 23, 0, 0, 24, 7, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 21, 7, 0, 22, 7, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0, -262119, 7, 0, -262116, 7, 0, -262113, 7, 0, -262110, 7, 0, -262109, 7, 0, -262108, 7, 0, 23, 7, 0, 24, 7, 0, 25, 7, 0, 26, 7, 0, 27, 7, 0, 28, 7, 0, 29, 7, 0, 30, 7, 0, 31, 7, 0, 32, 7, 0, 33, 7, 0, 34, 7, 0, 35, 7, 0, 36, 7, 0)
 
 [node name="UserInterface" parent="." unique_id=1841404296 instance=ExtResource("5_0tnpc")]
 layer = -10
@@ -153,12 +285,208 @@ position = Vector2(-150, 19)
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
 
 [node name="Area2D" type="Area2D" parent="Killzone" unique_id=2054273588]
+position = Vector2(37, -54)
 
 [node name="Collectibles" type="Node" parent="." unique_id=737882388]
 
 [node name="Points" type="Node" parent="Collectibles" unique_id=1633209490]
 
 [node name="Rings" type="Node" parent="Collectibles/Points" unique_id=1111254255]
+
+[node name="Ring" parent="Collectibles/Points/Rings" unique_id=939269496 instance=ExtResource("14_ir15t")]
+position = Vector2(119, -91)
+
+[node name="Ring3" parent="Collectibles/Points/Rings" unique_id=1308627839 instance=ExtResource("14_ir15t")]
+position = Vector2(145, -91)
+
+[node name="Ring4" parent="Collectibles/Points/Rings" unique_id=829622664 instance=ExtResource("14_ir15t")]
+position = Vector2(171, -91)
+
+[node name="Ring5" parent="Collectibles/Points/Rings" unique_id=856363489 instance=ExtResource("14_ir15t")]
+position = Vector2(311, -91)
+
+[node name="Ring6" parent="Collectibles/Points/Rings" unique_id=2024475904 instance=ExtResource("14_ir15t")]
+position = Vector2(337, -91)
+
+[node name="Ring7" parent="Collectibles/Points/Rings" unique_id=1461818450 instance=ExtResource("14_ir15t")]
+position = Vector2(363, -91)
+
+[node name="Ring8" parent="Collectibles/Points/Rings" unique_id=200888434 instance=ExtResource("14_ir15t")]
+position = Vector2(885, -30)
+
+[node name="Ring9" parent="Collectibles/Points/Rings" unique_id=551791662 instance=ExtResource("14_ir15t")]
+position = Vector2(911, -30)
+
+[node name="Ring10" parent="Collectibles/Points/Rings" unique_id=2112380658 instance=ExtResource("14_ir15t")]
+position = Vector2(937, -30)
+
+[node name="Ring17" parent="Collectibles/Points/Rings" unique_id=1172290869 instance=ExtResource("14_ir15t")]
+position = Vector2(1516, -24)
+
+[node name="Ring18" parent="Collectibles/Points/Rings" unique_id=1791865327 instance=ExtResource("14_ir15t")]
+position = Vector2(1542, -24)
+
+[node name="Ring19" parent="Collectibles/Points/Rings" unique_id=1815617320 instance=ExtResource("14_ir15t")]
+position = Vector2(1568, -24)
+
+[node name="Ring40" parent="Collectibles/Points/Rings" unique_id=1965793642 instance=ExtResource("14_ir15t")]
+position = Vector2(2137, 447)
+
+[node name="Ring41" parent="Collectibles/Points/Rings" unique_id=48678890 instance=ExtResource("14_ir15t")]
+position = Vector2(2163, 447)
+
+[node name="Ring42" parent="Collectibles/Points/Rings" unique_id=187994282 instance=ExtResource("14_ir15t")]
+position = Vector2(2189, 447)
+
+[node name="Ring43" parent="Collectibles/Points/Rings" unique_id=1848008181 instance=ExtResource("14_ir15t")]
+position = Vector2(2136, 412)
+
+[node name="Ring44" parent="Collectibles/Points/Rings" unique_id=1247181618 instance=ExtResource("14_ir15t")]
+position = Vector2(2162, 412)
+
+[node name="Ring45" parent="Collectibles/Points/Rings" unique_id=65362634 instance=ExtResource("14_ir15t")]
+position = Vector2(2188, 412)
+
+[node name="Ring46" parent="Collectibles/Points/Rings" unique_id=1232880147 instance=ExtResource("14_ir15t")]
+position = Vector2(2139, 383)
+
+[node name="Ring47" parent="Collectibles/Points/Rings" unique_id=1181624955 instance=ExtResource("14_ir15t")]
+position = Vector2(2165, 383)
+
+[node name="Ring48" parent="Collectibles/Points/Rings" unique_id=1106530635 instance=ExtResource("14_ir15t")]
+position = Vector2(2191, 383)
+
+[node name="Ring49" parent="Collectibles/Points/Rings" unique_id=1312906739 instance=ExtResource("14_ir15t")]
+position = Vector2(3468, -430)
+
+[node name="Ring50" parent="Collectibles/Points/Rings" unique_id=1007732979 instance=ExtResource("14_ir15t")]
+position = Vector2(3494, -430)
+
+[node name="Ring51" parent="Collectibles/Points/Rings" unique_id=421333734 instance=ExtResource("14_ir15t")]
+position = Vector2(3520, -430)
+
+[node name="Ring52" parent="Collectibles/Points/Rings" unique_id=2027890782 instance=ExtResource("14_ir15t")]
+position = Vector2(3467, -465)
+
+[node name="Ring53" parent="Collectibles/Points/Rings" unique_id=1924133509 instance=ExtResource("14_ir15t")]
+position = Vector2(3493, -465)
+
+[node name="Ring54" parent="Collectibles/Points/Rings" unique_id=2014356117 instance=ExtResource("14_ir15t")]
+position = Vector2(3519, -465)
+
+[node name="Ring55" parent="Collectibles/Points/Rings" unique_id=140945069 instance=ExtResource("14_ir15t")]
+position = Vector2(3470, -494)
+
+[node name="Ring56" parent="Collectibles/Points/Rings" unique_id=731926449 instance=ExtResource("14_ir15t")]
+position = Vector2(3496, -494)
+
+[node name="Ring57" parent="Collectibles/Points/Rings" unique_id=1807131577 instance=ExtResource("14_ir15t")]
+position = Vector2(3522, -494)
+
+[node name="Ring58" parent="Collectibles/Points/Rings" unique_id=316561724 instance=ExtResource("14_ir15t")]
+position = Vector2(3327, -428)
+
+[node name="Ring59" parent="Collectibles/Points/Rings" unique_id=1515476452 instance=ExtResource("14_ir15t")]
+position = Vector2(3353, -428)
+
+[node name="Ring60" parent="Collectibles/Points/Rings" unique_id=197867554 instance=ExtResource("14_ir15t")]
+position = Vector2(3379, -428)
+
+[node name="Ring61" parent="Collectibles/Points/Rings" unique_id=1417001048 instance=ExtResource("14_ir15t")]
+position = Vector2(3326, -463)
+
+[node name="Ring62" parent="Collectibles/Points/Rings" unique_id=290213451 instance=ExtResource("14_ir15t")]
+position = Vector2(3352, -463)
+
+[node name="Ring63" parent="Collectibles/Points/Rings" unique_id=1763366959 instance=ExtResource("14_ir15t")]
+position = Vector2(3378, -463)
+
+[node name="Ring64" parent="Collectibles/Points/Rings" unique_id=264021015 instance=ExtResource("14_ir15t")]
+position = Vector2(3329, -492)
+
+[node name="Ring65" parent="Collectibles/Points/Rings" unique_id=1181241686 instance=ExtResource("14_ir15t")]
+position = Vector2(3355, -492)
+
+[node name="Ring66" parent="Collectibles/Points/Rings" unique_id=341960380 instance=ExtResource("14_ir15t")]
+position = Vector2(3381, -492)
+
+[node name="Ring20" parent="Collectibles/Points/Rings" unique_id=2074640042 instance=ExtResource("14_ir15t")]
+position = Vector2(1633, -24)
+
+[node name="Ring21" parent="Collectibles/Points/Rings" unique_id=1709288346 instance=ExtResource("14_ir15t")]
+position = Vector2(1659, -24)
+
+[node name="Ring22" parent="Collectibles/Points/Rings" unique_id=777568334 instance=ExtResource("14_ir15t")]
+position = Vector2(1685, -24)
+
+[node name="Ring23" parent="Collectibles/Points/Rings" unique_id=575846194 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -66)
+
+[node name="Ring24" parent="Collectibles/Points/Rings" unique_id=283433180 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -128)
+
+[node name="Ring25" parent="Collectibles/Points/Rings" unique_id=923288703 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -191)
+
+[node name="Ring26" parent="Collectibles/Points/Rings" unique_id=1762182766 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -265)
+
+[node name="Ring27" parent="Collectibles/Points/Rings" unique_id=1227320790 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -327)
+
+[node name="Ring28" parent="Collectibles/Points/Rings" unique_id=880072689 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -545)
+
+[node name="Ring29" parent="Collectibles/Points/Rings" unique_id=1475348455 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -420)
+
+[node name="Ring30" parent="Collectibles/Points/Rings" unique_id=2119879795 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -482)
+
+[node name="Ring31" parent="Collectibles/Points/Rings" unique_id=361669934 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, -545)
+
+[node name="Ring32" parent="Collectibles/Points/Rings" unique_id=2029020219 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 20)
+
+[node name="Ring33" parent="Collectibles/Points/Rings" unique_id=1487403259 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 145)
+
+[node name="Ring34" parent="Collectibles/Points/Rings" unique_id=269283586 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 83)
+
+[node name="Ring35" parent="Collectibles/Points/Rings" unique_id=70965532 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 20)
+
+[node name="Ring36" parent="Collectibles/Points/Rings" unique_id=780865074 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 255)
+
+[node name="Ring37" parent="Collectibles/Points/Rings" unique_id=1068801054 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 380)
+
+[node name="Ring38" parent="Collectibles/Points/Rings" unique_id=2013967958 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 318)
+
+[node name="Ring39" parent="Collectibles/Points/Rings" unique_id=1085504775 instance=ExtResource("14_ir15t")]
+position = Vector2(1772, 255)
+
+[node name="Ring11" parent="Collectibles/Points/Rings" unique_id=828548419 instance=ExtResource("14_ir15t")]
+position = Vector2(1100, -29)
+
+[node name="Ring12" parent="Collectibles/Points/Rings" unique_id=1680219187 instance=ExtResource("14_ir15t")]
+position = Vector2(1150, -27)
+
+[node name="Ring13" parent="Collectibles/Points/Rings" unique_id=414981836 instance=ExtResource("14_ir15t")]
+position = Vector2(1200, -28)
+
+[node name="Ring14" parent="Collectibles/Points/Rings" unique_id=1074424605 instance=ExtResource("14_ir15t")]
+position = Vector2(1263, -26)
+
+[node name="Ring15" parent="Collectibles/Points/Rings" unique_id=1310986524 instance=ExtResource("14_ir15t")]
+position = Vector2(1315, -26)
+
+[node name="Ring16" parent="Collectibles/Points/Rings" unique_id=401895405 instance=ExtResource("14_ir15t")]
+position = Vector2(1380, -26)
 
 [node name="Mario Coins" type="Node" parent="Collectibles/Points" unique_id=1083648077]
 
@@ -175,10 +503,10 @@ position = Vector2(-150, 19)
 [node name="Platforms" type="Node" parent="." unique_id=77416904]
 
 [node name="Platform" parent="Platforms" unique_id=710371985 instance=ExtResource("8_0tnpc")]
-position = Vector2(335, -50)
+position = Vector2(145, -60)
 
 [node name="Platform2" parent="Platforms" unique_id=1677944383 instance=ExtResource("8_0tnpc")]
-position = Vector2(455, -11)
+position = Vector2(339, -63)
 
 [node name="Platform3" parent="Platforms" unique_id=359171396 instance=ExtResource("8_0tnpc")]
 position = Vector2(1104, 12)
@@ -192,7 +520,31 @@ position = Vector2(1104, 12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4" unique_id=1335851920]
 libraries/ = SubResource("AnimationLibrary_kvpfn")
-autoplay = &"sideways"
+autoplay = &"up and down"
+
+[node name="Platform6" parent="Platforms" unique_id=1957818500 instance=ExtResource("8_0tnpc")]
+position = Vector2(1104, 12)
+rotation = 4.712389
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform6" unique_id=708044186]
+libraries/ = SubResource("AnimationLibrary_kvpfn")
+autoplay = &"up and down 2"
+
+[node name="GrassPlatform" parent="Platforms" unique_id=2106830752 instance=ExtResource("8_0tnpc")]
+position = Vector2(2592, -240)
+rotation = 4.712389
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/GrassPlatform" unique_id=324463979]
+libraries/ = SubResource("AnimationLibrary_1kice")
+autoplay = &"4"
+
+[node name="GrassPlatform2" parent="Platforms" unique_id=653239960 instance=ExtResource("8_0tnpc")]
+position = Vector2(2880, -240)
+rotation = 4.712389
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/GrassPlatform2" unique_id=340659897]
+libraries/ = SubResource("AnimationLibrary_bt5mj")
+autoplay = &"5"
 
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
