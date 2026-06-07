@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://gyacbdk6ymcu"]
+
+[ext_resource type="Texture2D" uid="uid://uhqsevqhlan3" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/platforms/platform_middle.png" id="1_30eho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uve5g"]
+size = Vector2(96, 24)
+
+[node name="GrassPlatform" type="AnimatableBody2D" unique_id=710371985]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1917684550]
+texture = ExtResource("1_30eho")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=768501956]
+shape = SubResource("RectangleShape2D_uve5g")

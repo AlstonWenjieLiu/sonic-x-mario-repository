@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjnaymhls1fnn"
-path="res://.godot/imported/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png-0d598339718065766034ae0fcaed5d06.ctex"
+uid="uid://eqil0ly8gwsw"
+path="res://.godot/imported/platform_left.png-a8991defafed6c74bcb7eda0da49ba51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png"
-dest_files=["res://.godot/imported/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png-0d598339718065766034ae0fcaed5d06.ctex"]
+source_file="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/platforms/platform_left.png"
+dest_files=["res://.godot/imported/platform_left.png-a8991defafed6c74bcb7eda0da49ba51.ctex"]
 
 [params]
 
