@@ -115,7 +115,7 @@ z_index = -3
 position = Vector2(-2, -76)
 sprite_frames = SubResource("SpriteFrames_kvuet")
 autoplay = "default"
-frame_progress = 0.23273905
+frame_progress = 0.08474114
 
 [node name="Music" parent="Player" unique_id=518075246 instance=ExtResource("3_lnu2h")]
 position = Vector2(-150, 19)
