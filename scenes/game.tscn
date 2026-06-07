@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://m4nu25u7elvv" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/704.png" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://bo0yamhhd7iye" path="res://scenes/maps/sunset_hill/music.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cjlooyfjqxnyk" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/0.png" id="4_gee14"]
-[ext_resource type="Texture2D" uid="uid://ci11xh4ksj5j8" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/background/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated) - Enlarged.png" id="6_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://bsh76e4dqey5l" path="res://scenes/user_interface.tscn" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://gyacbdk6ymcu" path="res://scenes/maps/sunset_hill/platforms/grass_platform.tscn" id="8_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
@@ -35,65 +35,8 @@ sources/0 = SubResource("TileSetAtlasSource_0tnpc")
 sources/2 = SubResource("TileSetAtlasSource_vtaks")
 sources/3 = SubResource("TileSetAtlasSource_kvpfn")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 14, 479, 319)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 338, 479, 319)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 662, 479, 319)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 986, 479, 319)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 1310, 479, 319)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 1634, 479, 319)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
-atlas = ExtResource("6_0tnpc")
-region = Rect2(16, 1958, 479, 319)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kvuet"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vtaks")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kvpfn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dinhu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kvuet")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_trtic")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ir15t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ca42v")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="Animation" id="Animation_0tnpc"]
-length = 0.001
+length = 2.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -118,7 +61,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.0666666),
+"times": PackedFloat32Array(0, 2.0333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1104, 12), Vector2(1392, 12)]
@@ -140,20 +83,16 @@ tile_set = SubResource("TileSet_kvpfn")
 format = 2
 layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0)
 
+[node name="UserInterface" parent="." unique_id=1841404296 instance=ExtResource("5_0tnpc")]
+layer = -10
+
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
 position = Vector2(150, -19)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
 position = Vector2(2, 0)
-offset = Vector2(0, -75)
-zoom = Vector2(2.43, 2.04)
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player/Camera2D" unique_id=516275498]
-z_index = -3
-position = Vector2(-2, -76)
-sprite_frames = SubResource("SpriteFrames_kvuet")
-autoplay = "default"
-frame_progress = 0.08474114
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
 
 [node name="Music" parent="Player" unique_id=518075246 instance=ExtResource("3_lnu2h")]
 position = Vector2(-150, 19)
@@ -193,7 +132,7 @@ position = Vector2(1104, 12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3" unique_id=1955753254]
 libraries/ = SubResource("AnimationLibrary_kvpfn")
-autoplay = &"RESET"
+autoplay = &"sideways"
 
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bsh76e4dqey5l"]
+
+[ext_resource type="Texture2D" uid="uid://bjnaymhls1fnn" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/background/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png" id="1_syvep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2bgj"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 7, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1h3b"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 169, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbsfc"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 331, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cufge"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 493, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmgon"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 655, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsrv6"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 817, 240, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdud1"]
+atlas = ExtResource("1_syvep")
+region = Rect2(8, 979, 240, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aisij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2bgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1h3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbsfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cufge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmgon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsrv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdud1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UserInterface" type="CanvasLayer" unique_id=1841404296]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1589570362]
+position = Vector2(583.12494, 259.74997)
+scale = Vector2(4.865625, 4.865625)
+sprite_frames = SubResource("SpriteFrames_aisij")
+autoplay = "default"
+frame_progress = 0.86024636
