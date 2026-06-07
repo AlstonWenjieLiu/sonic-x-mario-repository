@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dejhrrtd6stmd"]
 
-[ext_resource type="PackedScene" uid="uid://byv4brdjsn8tq" path="res://scenes/maps/helpers/boundary_side.tscn" id="1_viule"]
+[ext_resource type="PackedScene" uid="uid://byv4brdjsn8tq" path="res://scenes/maps/sunset_hill/helpers/boundary_side.tscn" id="1_viule"]
 
 [node name="WorldBoundary" type="StaticBody2D" unique_id=1789907258]
 

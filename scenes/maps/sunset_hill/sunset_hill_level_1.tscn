@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8ulik6vaieut"]
 
-[ext_resource type="PackedScene" uid="uid://cndsg26ijahvr" path="res://scenes/maps/sunset_hill_tile_set.tscn" id="1_2trbt"]
+[ext_resource type="PackedScene" uid="uid://cndsg26ijahvr" path="res://scenes/maps/sunset_hill/sunset_hill_tile_set.tscn" id="1_2trbt"]
 
 [node name="sunset_hill_level_1" type="Node2D" unique_id=842018264]
 
