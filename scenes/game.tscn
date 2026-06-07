@@ -103,10 +103,27 @@ tracks/0/keys = {
 "values": [Vector2(1104, 12), Vector2(1392, 12)]
 }
 
+[sub_resource type="Animation" id="Animation_trtic"]
+resource_name = "up and down"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1776, 316), Vector2(1776, 316)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kvpfn"]
 _data = {
 &"RESET": SubResource("Animation_0tnpc"),
-&"sideways": SubResource("Animation_vtaks")
+&"sideways": SubResource("Animation_vtaks"),
+&"up and down": SubResource("Animation_trtic")
 }
 
 [node name="Game" type="Node2D" unique_id=1773793134]
@@ -117,7 +134,7 @@ script = ExtResource("1_lbhrr")
 [node name="TileMap" type="TileMap" parent="." unique_id=1640312727]
 tile_set = SubResource("TileSet_kvpfn")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 18, 7, 0, 19, 7, 0, 20, 7, 0, 21, 0, 0, 22, 7, 0, 23, 0, 0, 24, 7, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 21, 0, 0, 22, 7, 0, 23, 0, 0, 24, 7, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0)
 
 [node name="UserInterface" parent="." unique_id=1841404296 instance=ExtResource("5_0tnpc")]
 layer = -10
@@ -167,6 +184,13 @@ position = Vector2(455, -11)
 position = Vector2(1104, 12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3" unique_id=1955753254]
+libraries/ = SubResource("AnimationLibrary_kvpfn")
+autoplay = &"sideways"
+
+[node name="Platform4" parent="Platforms" unique_id=778425288 instance=ExtResource("8_0tnpc")]
+position = Vector2(1104, 12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4" unique_id=1335851920]
 libraries/ = SubResource("AnimationLibrary_kvpfn")
 autoplay = &"sideways"
 
