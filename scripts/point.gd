@@ -1,4 +1,6 @@
 extends Area2D
 
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+@onready var game_manager: Node = $"../../../../GameManager"
+
+func _on_body_entered(body: Node2D):
+	game_manager.add_point()
