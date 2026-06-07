@@ -4,10 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bmd0g5fvnc5xh" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/2.png" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://dlaxkiuytf1g0" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/14.png" id="3_dinhu"]
 [ext_resource type="Texture2D" uid="uid://m4nu25u7elvv" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/704.png" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://bo0yamhhd7iye" path="res://scenes/maps/sunset_hill/music.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cjlooyfjqxnyk" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/0.png" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://bsh76e4dqey5l" path="res://scenes/user_interface.tscn" id="5_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://c45mt6xw3jjei" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/15.png" id="6_kvuet"]
+[ext_resource type="Texture2D" uid="uid://bakp7rn0g727e" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/33.png" id="7_trtic"]
 [ext_resource type="PackedScene" uid="uid://gyacbdk6ymcu" path="res://scenes/maps/sunset_hill/platforms/grass_platform.tscn" id="8_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
@@ -15,6 +18,11 @@ texture = ExtResource("2_u5sy4")
 texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir15t"]
+texture = ExtResource("3_dinhu")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("3_gee14")
@@ -28,12 +36,25 @@ texture_region_size = Vector2i(96, 96)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca42v"]
+texture = ExtResource("6_kvuet")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rysoc"]
+texture = ExtResource("7_trtic")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_kvpfn"]
 tile_size = Vector2i(96, 96)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0tnpc")
 sources/2 = SubResource("TileSetAtlasSource_vtaks")
 sources/3 = SubResource("TileSetAtlasSource_kvpfn")
+sources/1 = SubResource("TileSetAtlasSource_ir15t")
+sources/4 = SubResource("TileSetAtlasSource_ca42v")
+sources/5 = SubResource("TileSetAtlasSource_rysoc")
 
 [sub_resource type="Animation" id="Animation_0tnpc"]
 length = 2.6
@@ -81,7 +102,7 @@ script = ExtResource("1_lbhrr")
 [node name="TileMap" type="TileMap" parent="." unique_id=1640312727]
 tile_set = SubResource("TileSet_kvpfn")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 65536, 1, 0, 131072, 4, 0)
 
 [node name="UserInterface" parent="." unique_id=1841404296 instance=ExtResource("5_0tnpc")]
 layer = -10
@@ -90,7 +111,7 @@ layer = -10
 position = Vector2(150, -19)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
-position = Vector2(2, 0)
+position = Vector2(3, 0)
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
