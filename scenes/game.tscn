@@ -554,7 +554,10 @@ autoplay = &"5"
 
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
-[node name="Labels" type="Node" parent="." unique_id=2114729452]
+[node name="MotoBug" parent="Enemies" unique_id=509930679 instance=ExtResource("16_ca42v")]
+position = Vector2(910, -9)
 
-[node name="MotoBug" parent="." unique_id=509930679 instance=ExtResource("16_ca42v")]
-position = Vector2(281, -12)
+[node name="MotoBug2" parent="Enemies" unique_id=427371844 instance=ExtResource("16_ca42v")]
+position = Vector2(29, -86)
+
+[node name="Labels" type="Node" parent="." unique_id=2114729452]
