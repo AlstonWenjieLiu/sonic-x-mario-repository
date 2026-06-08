@@ -1,14 +1,46 @@
 [gd_scene format=3 uid="uid://h6t6u1y1ylux"]
 
+[ext_resource type="Texture2D" uid="uid://vxvf8o1ff2qf" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/enemies/Game Boy Advance - Sonic Advance 3 - Enemies & Bosses - Badniks - Robo Bug 1.png" id="1_5uy6h"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://cnwcgx1yxsbtf" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/enemies/Game Boy Advance - Sonic Advance 3 - Enemies & Bosses - Badniks - Robo Bug 2.png" id="2_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://b8287aaepso0b" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/enemies/Game Boy Advance - Sonic Advance 3 - Enemies & Bosses - Badniks - Robo Bug 3.png" id="3_xwavj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nenq2"]
+atlas = ExtResource("1_5uy6h")
+region = Rect2(0, 0, 30, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_md0e3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nenq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c4w8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xwavj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md484"]
+radius = 8.0
+height = 16.0
 
 [node name="MotoBug" type="Node2D" unique_id=509930679]
+position = Vector2(0, -9)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=618786250]
+position = Vector2(-3, 0)
+sprite_frames = SubResource("SpriteFrames_md0e3")
+autoplay = "default"
+frame_progress = 0.5779861
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("1_7p1mj")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=618786250]
-sprite_frames = SubResource("SpriteFrames_md0e3")
-autoplay = "default"
-frame_progress = 0.8852405
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1879664213]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_md484")

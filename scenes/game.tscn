@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://wkgkfwm5es8i" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/375.png" id="8_kvuet"]
 [ext_resource type="Texture2D" uid="uid://dgtynvwd3rs4j" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/366_clear.png" id="9_trtic"]
 [ext_resource type="PackedScene" uid="uid://byniag68rwbnh" path="res://scenes/point.tscn" id="14_ir15t"]
+[ext_resource type="PackedScene" uid="uid://h6t6u1y1ylux" path="res://scenes/enemy.tscn" id="16_ca42v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
 texture = ExtResource("2_u5sy4")
@@ -554,3 +555,6 @@ autoplay = &"5"
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
 [node name="Labels" type="Node" parent="." unique_id=2114729452]
+
+[node name="MotoBug" parent="." unique_id=509930679 instance=ExtResource("16_ca42v")]
+position = Vector2(281, -12)
