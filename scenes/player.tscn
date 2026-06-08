@@ -63,8 +63,18 @@ animations = [{
 "texture": SubResource("AtlasTexture_smehm")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4r1p"]
@@ -78,9 +88,10 @@ collision_layer = 3
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1228439396]
+position = Vector2(259, -15)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-autoplay = "default"
-frame_progress = 0.16368936
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629172029]
 position = Vector2(0, 7)
