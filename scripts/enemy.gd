@@ -24,7 +24,7 @@ func _process(delta: float):
 		if ray_cast_left.is_colliding():
 			direction = "right"
 	
-	if not ray_cast_bottom.is_colliding() and switching_direction == false:
+	if not ray_cast_bottom.is_colliding() and switching_direction == false: # if about to "fall" and 
 		if direction == "right":
 			direction = "left"
 			switching_direction = true;

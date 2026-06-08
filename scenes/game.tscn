@@ -269,13 +269,13 @@ script = ExtResource("1_lbhrr")
 [node name="TileMap" type="TileMap" parent="." unique_id=1640312727]
 tile_set = SubResource("TileSet_kvpfn")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 21, 7, 0, 22, 7, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0, -262119, 7, 0, -262116, 7, 0, -262113, 7, 0, -262110, 7, 0, -262109, 7, 0, -262108, 7, 0, 23, 7, 0, 24, 7, 0, 25, 7, 0, 26, 7, 0, 27, 7, 0, 28, 7, 0, 29, 7, 0, 30, 7, 0, 31, 7, 0, 32, 7, 0, 33, 7, 0, 34, 7, 0, 35, 7, 0, 36, 7, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0, -262119, 7, 0, -262116, 7, 0, -262113, 7, 0, -262110, 7, 0, -262109, 7, 0, -262108, 7, 0, 29, 7, 0, 30, 7, 0, 31, 7, 0, 32, 7, 0, 33, 7, 0, 34, 7, 0, 35, 7, 0, 36, 7, 0, -393192, 7, 0, -196584, 7, 0, -65514, 0, 0, -65511, 0, 0, 23, 0, 0, 24, 0, 0, 22, 1, 0, 25, 1, 0)
 
 [node name="UserInterface" parent="." unique_id=1841404296 instance=ExtResource("5_0tnpc")]
 layer = -10
 
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("1_uwrxv")]
-position = Vector2(150, -19)
+position = Vector2(70, -27)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=998678555]
 position = Vector2(3, 0)
@@ -299,23 +299,23 @@ shape = SubResource("WorldBoundaryShape2D_ir15t")
 
 [node name="Rings" type="Node" parent="Collectibles/Points" unique_id=1111254255]
 
-[node name="Ring" parent="Collectibles/Points/Rings" unique_id=939269496 instance=ExtResource("14_ir15t")]
-position = Vector2(119, -91)
-
-[node name="Ring3" parent="Collectibles/Points/Rings" unique_id=1308627839 instance=ExtResource("14_ir15t")]
-position = Vector2(145, -91)
-
-[node name="Ring4" parent="Collectibles/Points/Rings" unique_id=829622664 instance=ExtResource("14_ir15t")]
-position = Vector2(171, -91)
-
 [node name="Ring5" parent="Collectibles/Points/Rings" unique_id=856363489 instance=ExtResource("14_ir15t")]
-position = Vector2(311, -91)
+position = Vector2(310, -110)
 
 [node name="Ring6" parent="Collectibles/Points/Rings" unique_id=2024475904 instance=ExtResource("14_ir15t")]
-position = Vector2(337, -91)
+position = Vector2(336, -110)
 
 [node name="Ring7" parent="Collectibles/Points/Rings" unique_id=1461818450 instance=ExtResource("14_ir15t")]
-position = Vector2(363, -91)
+position = Vector2(362, -110)
+
+[node name="Ring67" parent="Collectibles/Points/Rings" unique_id=939269496 instance=ExtResource("14_ir15t")]
+position = Vector2(118, -110)
+
+[node name="Ring68" parent="Collectibles/Points/Rings" unique_id=1605333370 instance=ExtResource("14_ir15t")]
+position = Vector2(144, -110)
+
+[node name="Ring69" parent="Collectibles/Points/Rings" unique_id=2033786951 instance=ExtResource("14_ir15t")]
+position = Vector2(170, -110)
 
 [node name="Ring8" parent="Collectibles/Points/Rings" unique_id=200888434 instance=ExtResource("14_ir15t")]
 position = Vector2(885, -30)
@@ -509,10 +509,10 @@ position = Vector2(1380, -26)
 [node name="Platforms" type="Node" parent="." unique_id=77416904]
 
 [node name="Platform" parent="Platforms" unique_id=710371985 instance=ExtResource("8_0tnpc")]
-position = Vector2(145, -60)
+position = Vector2(144, -84)
 
 [node name="Platform2" parent="Platforms" unique_id=1677944383 instance=ExtResource("8_0tnpc")]
-position = Vector2(339, -63)
+position = Vector2(336, -84)
 
 [node name="Platform3" parent="Platforms" unique_id=359171396 instance=ExtResource("8_0tnpc")]
 position = Vector2(1104, 12)
@@ -527,14 +527,6 @@ position = Vector2(1104, 12)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4" unique_id=1335851920]
 libraries/ = SubResource("AnimationLibrary_kvpfn")
 autoplay = &"up and down"
-
-[node name="Platform6" parent="Platforms" unique_id=1957818500 instance=ExtResource("8_0tnpc")]
-position = Vector2(1104, 12)
-rotation = 4.712389
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform6" unique_id=708044186]
-libraries/ = SubResource("AnimationLibrary_kvpfn")
-autoplay = &"up and down 2"
 
 [node name="GrassPlatform" parent="Platforms" unique_id=2106830752 instance=ExtResource("8_0tnpc")]
 position = Vector2(2592, -240)
@@ -552,6 +544,9 @@ rotation = 4.712389
 libraries/ = SubResource("AnimationLibrary_bt5mj")
 autoplay = &"5"
 
+[node name="GrassPlatform3" parent="Platforms" unique_id=736682914 instance=ExtResource("8_0tnpc")]
+position = Vector2(2301, -373)
+
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
 [node name="MotoBug" parent="Enemies" unique_id=509930679 instance=ExtResource("16_ca42v")]
@@ -559,5 +554,8 @@ position = Vector2(910, -9)
 
 [node name="MotoBug2" parent="Enemies" unique_id=427371844 instance=ExtResource("16_ca42v")]
 position = Vector2(29, -86)
+
+[node name="MotoBug3" parent="Enemies" unique_id=2105813737 instance=ExtResource("16_ca42v")]
+position = Vector2(2240, -9)
 
 [node name="Labels" type="Node" parent="." unique_id=2114729452]
