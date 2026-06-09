@@ -261,6 +261,44 @@ _data = {
 &"RESET": SubResource("Animation_37s47")
 }
 
+[sub_resource type="Animation" id="Animation_1kice"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2304, -240)]
+}
+
+[sub_resource type="Animation" id="Animation_bt5mj"]
+resource_name = "up and down"
+length = 3.0333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2304, -240), Vector2(2304, -528)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e1j6l"]
+_data = {
+&"RESET": SubResource("Animation_1kice"),
+&"up and down": SubResource("Animation_bt5mj")
+}
+
 [node name="Game" type="Node2D" unique_id=1773793134]
 
 [node name="GameManager" type="Node" parent="." unique_id=412565543]
@@ -269,7 +307,7 @@ script = ExtResource("1_lbhrr")
 [node name="TileMap" type="TileMap" parent="." unique_id=1640312727]
 tile_set = SubResource("TileSet_kvpfn")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0, -262119, 7, 0, -262116, 7, 0, -262113, 7, 0, -262110, 7, 0, -262109, 7, 0, -262108, 7, 0, 29, 7, 0, 30, 7, 0, 31, 7, 0, 32, 7, 0, 33, 7, 0, 34, 7, 0, 35, 7, 0, 36, 7, 0, -393192, 7, 0, -196584, 7, 0, -65514, 0, 0, -65511, 0, 0, 23, 0, 0, 24, 0, 0, 22, 1, 0, 25, 1, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 4, 0, 0, -1, 2, 0, -65537, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 15, 7, 0, 16, 7, 0, 17, 7, 0, 19, 7, 0, 20, 7, 0, 65536, 6, 0, 65537, 6, 0, 65538, 6, 0, 65539, 6, 0, 65540, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 327699, 7, 0, 327700, 7, 0, 327702, 7, 0, 327701, 7, 0, -262125, 7, 0, -262124, 7, 0, -262123, 7, 0, -262122, 7, 0, -262119, 7, 0, -262116, 7, 0, -262113, 7, 0, -262110, 7, 0, -262109, 7, 0, -262108, 7, 0, 29, 7, 0, 30, 7, 0, 31, 7, 0, 32, 7, 0, 33, 7, 0, 34, 7, 0, 35, 7, 0, 36, 7, 0, -65514, 0, 0, -65511, 0, 0, 23, 0, 0, 24, 0, 0, 22, 1, 0, 25, 1, 0, 28, 7, 0)
 
 [node name="UserInterface" parent="." unique_id=1841404296 instance=ExtResource("5_0tnpc")]
 layer = -10
@@ -545,15 +583,17 @@ libraries/ = SubResource("AnimationLibrary_bt5mj")
 autoplay = &"5"
 
 [node name="GrassPlatform3" parent="Platforms" unique_id=736682914 instance=ExtResource("8_0tnpc")]
-position = Vector2(2301, -373)
+position = Vector2(2304, -240)
+rotation = 4.712389
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/GrassPlatform3" unique_id=1505224406]
+libraries/ = SubResource("AnimationLibrary_e1j6l")
+autoplay = &"up and down"
 
 [node name="Enemies" type="Node" parent="." unique_id=720590199]
 
 [node name="MotoBug" parent="Enemies" unique_id=509930679 instance=ExtResource("16_ca42v")]
 position = Vector2(910, -9)
-
-[node name="MotoBug2" parent="Enemies" unique_id=427371844 instance=ExtResource("16_ca42v")]
-position = Vector2(29, -86)
 
 [node name="MotoBug3" parent="Enemies" unique_id=2105813737 instance=ExtResource("16_ca42v")]
 position = Vector2(2240, -9)
