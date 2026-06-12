@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" format=3 uid="uid://daxxbbfwlonfo"]
+
+[sub_resource type="FontVariation" id="FontVariation_27nn1"]
+
+[resource]
+base_font = SubResource("FontVariation_27nn1")
