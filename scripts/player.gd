@@ -27,7 +27,12 @@ func _physics_process(delta: float) -> void:
 	
 	if direction > 0:
 		animated_sprite_2d.flip_h = true;
+		animated_sprite_2d.play("run_a")
 	elif direction < 0:
 		animated_sprite_2d.flip_h = false;
+		animated_sprite_2d.play("run_a")
+	elif direction == 0:
+		animated_sprite_2d.play("idle")
+		
 
 	move_and_slide()

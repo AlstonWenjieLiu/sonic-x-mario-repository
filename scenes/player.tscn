@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://die4p3ymi6vgq" path="res://assets/sprites/characters/sonic/Game Boy Advance - Sonic Advance 3 - Playable Characters - Sonic the Hedgehog.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://dp7bnjrqkd5kv" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://25mvvtassp2s" path="res://assets/sprites/characters/sonic/run/run_a/run_a_1.png" id="3_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://db6g4a6vd0cbt" path="res://assets/sprites/characters/sonic/run/run_a/run_a_2.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://clf77i0g4qr8w" path="res://assets/sprites/characters/sonic/run/run_a/run_a_3.png" id="5_smehm"]
+[ext_resource type="Texture2D" uid="uid://bymjru3y108e8" path="res://assets/sprites/characters/sonic/run/run_a/run_a_4.png" id="6_ur7pv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
 atlas = ExtResource("1_3vyb7")
@@ -66,10 +70,22 @@ animations = [{
 "name": &"idle",
 "speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_smehm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ur7pv")
+}],
 "loop": true,
-"name": &"new_animation",
-"speed": 5.0
+"name": &"run_a",
+"speed": 12.0
 }, {
 "frames": [],
 "loop": true,
@@ -90,8 +106,9 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1228439396]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"idle"
+animation = &"run_a"
 autoplay = "idle"
+frame_progress = 0.57130885
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629172029]
 position = Vector2(0, 7)
