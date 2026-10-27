@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
 
 [ext_resource type="Script" uid="uid://dqni1kblntodj" path="res://scripts/game_manager.gd" id="1_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/sonic.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bmd0g5fvnc5xh" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/2.png" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://dlaxkiuytf1g0" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/14.png" id="3_dinhu"]

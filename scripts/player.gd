@@ -1,11 +1,12 @@
 class_name Player
 extends CharacterBody2D
 
+var active_char = "Sonic"
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -475.0
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
