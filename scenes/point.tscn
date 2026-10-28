@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://byniag68rwbnh"]
 
 [ext_resource type="Script" uid="uid://coejvpu1p11yr" path="res://scripts/point.gd" id="1_dnso1"]
-[ext_resource type="Texture2D" uid="uid://dkwtil5mc7w5s" path="res://assets/visuals/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring1.png" id="2_olwhu"]
-[ext_resource type="Texture2D" uid="uid://bo2cjbuju2j3d" path="res://assets/visuals/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Rings2.png" id="3_n8ds4"]
-[ext_resource type="Texture2D" uid="uid://xt8787oolcfb" path="res://assets/visuals/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Rings3.png" id="4_fqc5c"]
-[ext_resource type="Texture2D" uid="uid://cji40p1xbp5w4" path="res://assets/visuals/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring4.png" id="5_8x4hd"]
+[ext_resource type="Texture2D" uid="uid://dkwtil5mc7w5s" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring1.png" id="2_olwhu"]
+[ext_resource type="Texture2D" uid="uid://bo2cjbuju2j3d" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Rings2.png" id="3_n8ds4"]
+[ext_resource type="Texture2D" uid="uid://xt8787oolcfb" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Rings3.png" id="4_fqc5c"]
+[ext_resource type="Texture2D" uid="uid://cji40p1xbp5w4" path="res://assets/sprites/items/rings/Game Boy Advance - Sonic Pinball Party - Miscellaneous - Sonic Objects - Ring4.png" id="5_8x4hd"]
 [ext_resource type="AudioStream" uid="uid://bxkhjasakh4d0" path="res://assets/sounds/sonic_rings.mp3" id="6_n1q2t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kahox"]
