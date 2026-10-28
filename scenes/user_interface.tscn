@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bsh76e4dqey5l"]
 
-[ext_resource type="Texture2D" uid="uid://bjnaymhls1fnn" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/background/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png" id="1_syvep"]
-[ext_resource type="FontFile" uid="uid://uparrg06y116" path="res://assets/fonts/kenvector_future.ttf" id="2_l2bgj"]
+[ext_resource type="Texture2D" uid="uid://bjnaymhls1fnn" path="res://assets/visuals/sprites/worlds/sonic/sonic_advance_3/sunset_hill/background/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png" id="1_syvep"]
+[ext_resource type="FontFile" uid="uid://uparrg06y116" path="res://assets/sounds/fonts/kenvector_future.ttf" id="2_l2bgj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l2bgj"]
 atlas = ExtResource("1_syvep")
