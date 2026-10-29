@@ -1,7 +1,7 @@
 extends Node
 
 var score = 0
-@onready var user_interface: Label = $"../UserInterface/ScoreLabel"
+@onready var user_interface: Label = $MarginContainer/HBoxContainer/ScoreLabel
 
 func add_point():
 	score += 1
