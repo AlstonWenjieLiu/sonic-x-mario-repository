@@ -54,7 +54,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sdud1")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -68,9 +68,18 @@ sprite_frames = SubResource("SpriteFrames_aisij")
 autoplay = "default"
 frame_progress = 0.86024636
 
-[node name="ScoreLabel" type="Label" parent="." unique_id=1575089661]
-offset_left = 22.0
-offset_top = 14.0
-offset_right = 214.0
-offset_bottom = 96.0
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1340940756]
+offset_left = 15.0
+offset_right = 76.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1332277714]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1575089661]
+layout_mode = 2
 text = "Score: 0"
