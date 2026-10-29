@@ -324,6 +324,7 @@ position_smoothing_enabled = true
 
 [node name="Music" parent="Player" unique_id=518075246 instance=ExtResource("3_lnu2h")]
 position = Vector2(-150, 19)
+volume_db = 10.0
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
 position = Vector2(300, 800)
