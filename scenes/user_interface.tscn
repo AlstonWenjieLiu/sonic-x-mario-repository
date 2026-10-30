@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bsh76e4dqey5l"]
 
 [ext_resource type="Texture2D" uid="uid://bjnaymhls1fnn" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/background/Game Boy Advance - Sonic Advance 3 - Backgrounds - Sunset Hill (Animated).png" id="1_syvep"]
+[ext_resource type="FontFile" uid="uid://uparrg06y116" path="res://assets/fonts/kenvector_future.ttf" id="2_l2bgj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l2bgj"]
 atlas = ExtResource("1_syvep")
@@ -69,9 +70,10 @@ autoplay = "default"
 frame_progress = 0.86024636
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1340940756]
-offset_left = 15.0
-offset_right = 76.0
-offset_bottom = 40.0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 191.0
+offset_bottom = 46.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
@@ -82,4 +84,6 @@ size_flags_vertical = 4
 
 [node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1575089661]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_l2bgj")
+theme_override_font_sizes/font_size = 26
 text = "Score: 0"
