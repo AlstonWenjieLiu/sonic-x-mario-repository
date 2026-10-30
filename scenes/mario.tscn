@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dp7bnjrqkd5kv" path="res://scripts/player.gd" id="1_cjj4f"]
 [ext_resource type="Texture2D" uid="uid://die4p3ymi6vgq" path="res://assets/sprites/characters/sonic/Game Boy Advance - Sonic Advance 3 - Playable Characters - Sonic the Hedgehog.png" id="2_8ska5"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/mario/Game Boy Advance - Mario & Luigi_ Superstar Saga - Playable Characters - Mario (Overworld).png" id="3_5gbmu"]
+[ext_resource type="Texture2D" uid="uid://b7fmoyo7lk771" path="res://assets/sprites/characters/mario/gba_mnl_ss/run.png" id="3_5gbmu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
 atlas = ExtResource("2_8ska5")
@@ -38,35 +38,35 @@ region = Rect2(254, 0, 36, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnd63"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(8, 82, 21, 41)
+region = Rect2(0, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgcl4"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(29, 82, 21, 41)
+region = Rect2(21, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cjj4f"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(50, 82, 21, 41)
+region = Rect2(42, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ska5"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(71, 82, 21, 41)
+region = Rect2(63, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5l4gq"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(92, 82, 21, 41)
+region = Rect2(84, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0xp7"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(113, 82, 21, 41)
+region = Rect2(105, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q20sn"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(134, 82, 21, 41)
+region = Rect2(126, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5geh"]
 atlas = ExtResource("3_5gbmu")
-region = Rect2(155, 82, 21, 41)
+region = Rect2(147, 0, 21, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ur7pv"]
 animations = [{
@@ -145,11 +145,11 @@ collision_layer = 3
 script = ExtResource("1_cjj4f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1228439396]
-position = Vector2(-1, 0)
+position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"run_a"
 autoplay = "idle"
-frame_progress = 0.57130885
+frame_progress = 0.6053813
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629172029]
 position = Vector2(0, 7)
