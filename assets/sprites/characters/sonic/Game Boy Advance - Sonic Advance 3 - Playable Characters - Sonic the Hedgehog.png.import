@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsfhjfdcu01kr"
-path="res://.godot/imported/3.png-f6014f0ea2d5eed2e08fc56fca7e3f2b.ctex"
+uid="uid://die4p3ymi6vgq"
+path="res://.godot/imported/Game Boy Advance - Sonic Advance 3 - Playable Characters - Sonic the Hedgehog.png-a5a284783dcba8e10dd0a1c5804e2319.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/sonic/run/run_a/3.png"
-dest_files=["res://.godot/imported/3.png-f6014f0ea2d5eed2e08fc56fca7e3f2b.ctex"]
+source_file="res://assets/sprites/characters/sonic/Game Boy Advance - Sonic Advance 3 - Playable Characters - Sonic the Hedgehog.png"
+dest_files=["res://.godot/imported/Game Boy Advance - Sonic Advance 3 - Playable Characters - Sonic the Hedgehog.png-a5a284783dcba8e10dd0a1c5804e2319.ctex"]
 
 [params]
 
