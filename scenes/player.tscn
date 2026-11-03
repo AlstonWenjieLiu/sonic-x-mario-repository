@@ -66,7 +66,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_smehm")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle",
 "speed": 10.0
 }, {
@@ -83,12 +83,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_ur7pv")
 }],
-"loop": 1,
+"loop": true,
 "name": &"run_a",
 "speed": 12.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": true,
 "name": &"spin",
 "speed": 5.0
 }]
