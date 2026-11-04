@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chb3uc4jgnbkv"]
 
 [ext_resource type="Script" uid="uid://dqni1kblntodj" path="res://scripts/game_manager.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bwsgdj6e6kl43" path="res://scenes/game_manager_scene.tscn" id="1_rysoc"]
 [ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bmd0g5fvnc5xh" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/2.png" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://b255s444oi2a4" path="res://scenes/killzone.tscn" id="2_yqjtg"]
@@ -300,6 +301,8 @@ _data = {
 }
 
 [node name="Game" type="Node2D" unique_id=1773793134]
+
+[node name="game_manager_scene" parent="." unique_id=1608612700 instance=ExtResource("1_rysoc")]
 
 [node name="GameManager" type="Node" parent="." unique_id=412565543]
 script = ExtResource("1_lbhrr")
