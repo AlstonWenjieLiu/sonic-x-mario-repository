@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://gyacbdk6ymcu" path="res://scenes/maps/sunset_hill/platforms/grass_platform.tscn" id="8_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://wkgkfwm5es8i" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/375.png" id="8_kvuet"]
 [ext_resource type="Texture2D" uid="uid://dgtynvwd3rs4j" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/366_clear.png" id="9_trtic"]
+[ext_resource type="PackedScene" uid="uid://bq65ohyvuyyal" path="res://scenes/mario.tscn" id="13_rysoc"]
 [ext_resource type="PackedScene" uid="uid://byniag68rwbnh" path="res://scenes/point.tscn" id="14_ir15t"]
+[ext_resource type="Script" uid="uid://uemsji31ae2m" path="res://scenes/mario.gd" id="15_264po"]
 [ext_resource type="PackedScene" uid="uid://h6t6u1y1ylux" path="res://scenes/enemy.tscn" id="16_ca42v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
@@ -328,6 +330,9 @@ position_smoothing_enabled = true
 [node name="Music" parent="Player" unique_id=518075246 instance=ExtResource("3_lnu2h")]
 position = Vector2(-150, 19)
 volume_db = 10.0
+
+[node name="Player2" parent="." unique_id=1782382032 instance=ExtResource("13_rysoc")]
+script = ExtResource("15_264po")
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
 position = Vector2(300, 800)
