@@ -16,6 +16,10 @@ func _process(delta):
 		sonic_scene_path.show()
 		sonic_scene_path.set_process(true)
 		sonic_scene_path.set_physics_process(true)
+		mario_scene_path.process_mode = PROCESS_MODE_DISABLED
+		sonic_scene_path.process_mode = Node.PROCESS_MODE_INHERIT
+		mario_scene_path.get_node("CollisionShape2D").set_deferred("disabled", true)
+		sonic_scene_path.get_node("CollisionShape2D").set_deferred("disabled", false)
 		print("Switched to " + current_character)
 	elif Input.is_action_just_pressed("switch_to_mario"):
 		current_character = "mario"
@@ -25,4 +29,8 @@ func _process(delta):
 		mario_scene_path.show()
 		mario_scene_path.set_process(true)
 		mario_scene_path.set_physics_process(true)
+		sonic_scene_path.process_mode = PROCESS_MODE_DISABLED
+		sonic_scene_path.process_mode = Node.PROCESS_MODE_INHERIT
+		sonic_scene_path.get_node("CollisionShape2D").set_deferred("disabled", true)
+		mario_scene_path.get_node("CollisionShape2D").set_deferred("disabled", false)
 		print("Switched to " + current_character)
