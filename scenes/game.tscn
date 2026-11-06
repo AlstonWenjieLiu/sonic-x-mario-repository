@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://gyacbdk6ymcu" path="res://scenes/maps/sunset_hill/platforms/grass_platform.tscn" id="8_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://wkgkfwm5es8i" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/375.png" id="8_kvuet"]
 [ext_resource type="Texture2D" uid="uid://dgtynvwd3rs4j" path="res://assets/sprites/worlds/sonic/sonic_advance_3/sunset_hill/Game Boy Advance - Sonic Advance 3 - Tilesets - Sunset Hill/shz/366_clear.png" id="9_trtic"]
+[ext_resource type="Script" uid="uid://1jnt3tf4xjof" path="res://scripts/camera_2d.gd" id="13_1kice"]
 [ext_resource type="PackedScene" uid="uid://bq65ohyvuyyal" path="res://scenes/mario.tscn" id="13_rysoc"]
 [ext_resource type="PackedScene" uid="uid://byniag68rwbnh" path="res://scenes/point.tscn" id="14_ir15t"]
 [ext_resource type="Script" uid="uid://uemsji31ae2m" path="res://scenes/mario.gd" id="15_264po"]
@@ -326,6 +327,15 @@ zoom = Vector2(1.5, 1.5)
 limit_bottom = 700
 limit_smoothed = true
 position_smoothing_enabled = true
+script = ExtResource("13_1kice")
+
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=833059239]
+position = Vector2(3, 0)
+zoom = Vector2(1.5, 1.5)
+limit_bottom = 700
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("13_1kice")
 
 [node name="Music" parent="Player" unique_id=518075246 instance=ExtResource("3_lnu2h")]
 position = Vector2(-150, 19)
@@ -334,17 +344,6 @@ volume_db = 10.0
 [node name="Player2" parent="." unique_id=1782382032 instance=ExtResource("13_rysoc")]
 position = Vector2(30, -19)
 script = ExtResource("15_264po")
-
-[node name="Camera2D2" type="Camera2D" parent="Player2" unique_id=1438061522]
-position = Vector2(73, 0)
-zoom = Vector2(1.5, 1.5)
-limit_bottom = 700
-limit_smoothed = true
-position_smoothing_enabled = true
-
-[node name="Music2" parent="Player2" unique_id=752708242 instance=ExtResource("3_lnu2h")]
-position = Vector2(-80, 19)
-volume_db = 10.0
 
 [node name="Killzone" parent="." unique_id=866179896 instance=ExtResource("2_yqjtg")]
 position = Vector2(300, 800)
