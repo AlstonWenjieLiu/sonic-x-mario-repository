@@ -1,3 +1,5 @@
+# t4esting desc
+
 extends Node
 @export var current_character: Player
 @onready var sonic_scene_path = $"../Player"
