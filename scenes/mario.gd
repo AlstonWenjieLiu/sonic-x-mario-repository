@@ -7,7 +7,12 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 
 func _ready() -> void:
-	pass
+	hide()
+	set_process(false)
+	set_physics_process(false)
+	process_mode = PROCESS_MODE_DISABLED
+	get_node("CollisionShape2D").set_deferred("disabled", true)
+	
 
 func _procress():
 	pass
