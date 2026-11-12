@@ -24,6 +24,7 @@ func _process(delta):
 		sonic_scene_path.get_node("CollisionShape2D").set_deferred("disabled", false)
 		camera_scene_path.reparent(sonic_scene_path)
 		music_scene_path.reparent(sonic_scene_path)
+		camera_scene_path.position = Vector2.ZERO
 		camera_scene_path = $"../Player/Camera2D"
 		print("Switched to " + str(current_character))
 	elif Input.is_action_just_pressed("switch_to_mario"):
@@ -42,6 +43,7 @@ func _process(delta):
 		mario_scene_path.get_node("CollisionShape2D").set_deferred("disabled", false)
 		camera_scene_path.reparent(mario_scene_path)
 		music_scene_path.reparent(mario_scene_path)
+		camera_scene_path.position = Vector2.ZERO
 		camera_scene_path = $"../Player2/Camera2D"
 		print("Switched to " + str(current_character))
 	if current_character:
