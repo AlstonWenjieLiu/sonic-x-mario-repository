@@ -3,6 +3,7 @@ extends Node
 @onready var sonic_scene_path = $"../Player"
 @onready var mario_scene_path = $"../Player2"
 @onready var camera_scene_path = $"../Player/Camera2D"
+@onready var camera2_scene_path = $"../Player/Camera2D2"
 @onready var music_scene_path = $"../Player/Music"
 @onready var coords = Vector2(0, 0)
 
@@ -23,8 +24,10 @@ func _process(delta):
 		mario_scene_path.get_node("CollisionShape2D").set_deferred("disabled", true)
 		sonic_scene_path.get_node("CollisionShape2D").set_deferred("disabled", false)
 		camera_scene_path.reparent(sonic_scene_path)
+		camera2_scene_path.reparent(sonic_scene_path)
 		music_scene_path.reparent(sonic_scene_path)
 		camera_scene_path = $"../Player/Camera2D"
+		camera2_scene_path = $"../Player/Camera2D2"
 		print("Switched to " + str(current_character))
 	elif Input.is_action_just_pressed("switch_to_mario"):
 		current_character = $Player2
@@ -41,8 +44,10 @@ func _process(delta):
 		sonic_scene_path.get_node("CollisionShape2D").set_deferred("disabled", true)
 		mario_scene_path.get_node("CollisionShape2D").set_deferred("disabled", false)
 		camera_scene_path.reparent(mario_scene_path)
+		camera2_scene_path.reparent(mario_scene_path)
 		music_scene_path.reparent(mario_scene_path)
 		camera_scene_path = $"../Player2/Camera2D"
+		camera2_scene_path = $"../Player2/Camera2D2"
 		print("Switched to " + str(current_character))
 	if current_character:
 		coords = current_character.global_position
