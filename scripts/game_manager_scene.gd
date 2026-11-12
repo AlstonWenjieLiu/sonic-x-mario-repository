@@ -1,15 +1,18 @@
 extends Node
-@export var current_character: Player
 @onready var sonic_scene_path = $"../Player"
 @onready var mario_scene_path = $"../Player2"
+@onready var current_character = sonic_scene_path
 @onready var camera_scene_path = $"../Player/Camera2D"
 @onready var music_scene_path = $"../Player/Music"
 @onready var coords = Vector2(0, 0)
+@onready var swap = false # this is for the future: wheter there will be moments for character swapping or leaving at the place
 
 # might need to update if there are more character to be added
 func _process(delta):
+	print(coords)
 	if Input.is_action_just_pressed("switch_to_sonic"):
-		current_character = $Player
+		current_character = sonic_scene_path
+		sonic_scene_path.global_position = coords
 		if current_character:
 			current_character.global_position = coords
 		mario_scene_path.hide()
@@ -28,7 +31,8 @@ func _process(delta):
 		camera_scene_path = $"../Player/Camera2D"
 		print("Switched to " + str(current_character))
 	elif Input.is_action_just_pressed("switch_to_mario"):
-		current_character = $Player2
+		current_character = mario_scene_path
+		mario_scene_path.global_position = coords
 		if current_character:
 			current_character.global_position = coords
 		sonic_scene_path.hide()
