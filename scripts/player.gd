@@ -7,7 +7,7 @@ const SPEED = 400.0
 const JUMP_VELOCITY = -475.0
 
 func _ready() -> void:
-	pass
+	animated_sprite_2d.flip_h = true;
 
 func _procress():
 	pass
