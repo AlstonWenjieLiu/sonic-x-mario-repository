@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bq65ohyvuyyal"]
 
-[ext_resource type="Script" uid="uid://uemsji31ae2m" path="res://scenes/mario.gd" id="1_bvgp0"]
+[ext_resource type="Script" uid="uid://uemsji31ae2m" path="res://scripts/mario.gd" id="1_bvgp0"]
 [ext_resource type="Texture2D" uid="uid://b7fmoyo7lk771" path="res://assets/sprites/characters/mario/gba_mnl_ss/run.png" id="3_5gbmu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnd63"]
@@ -90,7 +90,7 @@ position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"run_a"
 autoplay = "idle"
-frame_progress = 0.82303524
+frame_progress = 0.58342886
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629172029]
 position = Vector2(0, 7)
