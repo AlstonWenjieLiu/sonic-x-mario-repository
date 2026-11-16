@@ -9,7 +9,6 @@ extends Node
 
 # might need to update if there are more character to be added
 func _process(delta):
-	print(coords)
 	if Input.is_action_just_pressed("switch_to_sonic"):
 		current_character = sonic_scene_path
 		sonic_scene_path.global_position = coords
