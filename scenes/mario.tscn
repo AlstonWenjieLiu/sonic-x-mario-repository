@@ -45,6 +45,11 @@ animations = [{
 "name": &"idle",
 "speed": 10.0
 }, {
+"frames": [],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wnd63")
@@ -88,9 +93,8 @@ script = ExtResource("1_bvgp0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1228439396]
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"run_a"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.58342886
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629172029]
 position = Vector2(0, 7)
