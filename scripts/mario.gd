@@ -6,6 +6,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 var falling = false
+var going_up = false
 
 func _ready() -> void:
 	hide()
@@ -17,6 +18,7 @@ func _ready() -> void:
 
 func _process(delta):
 	falling = velocity.y > 0
+	going_up = velocity.y < 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,6 +26,8 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		if falling:
 			animated_sprite_2d.play("fall")
+		else:
+			animated_sprite_2d.play("jump")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -40,14 +44,14 @@ func _physics_process(delta: float) -> void:
 	
 	if direction > 0:
 		animated_sprite_2d.flip_h = false;
-		if !falling:
+		if !falling && !going_up:
 			animated_sprite_2d.play("run_a")
 	elif direction < 0:
 		animated_sprite_2d.flip_h = true;
-		if !falling:
+		if !falling && !going_up:
 			animated_sprite_2d.play("run_a")
 	elif direction == 0:
-		if !falling:
+		if !falling && !going_up:
 			animated_sprite_2d.play("idle")
 	
 	move_and_slide()
