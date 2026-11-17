@@ -106,7 +106,7 @@ script = ExtResource("1_bvgp0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1228439396]
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"fall"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629172029]

@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
+var falling = false
 
 func _ready() -> void:
 	hide()
@@ -14,13 +15,15 @@ func _ready() -> void:
 	get_node("CollisionShape2D").set_deferred("disabled", true)
 	
 
-func _procress():
-	pass
+func _process(delta):
+	falling = velocity.y > 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor ():
 		velocity += get_gravity() * delta
+		if falling:
+			animated_sprite_2d.play("fall")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -37,11 +40,14 @@ func _physics_process(delta: float) -> void:
 	
 	if direction > 0:
 		animated_sprite_2d.flip_h = false;
-		animated_sprite_2d.play("run_a")
+		if !falling:
+			animated_sprite_2d.play("run_a")
 	elif direction < 0:
 		animated_sprite_2d.flip_h = true;
-		animated_sprite_2d.play("run_a")
+		if !falling:
+			animated_sprite_2d.play("run_a")
 	elif direction == 0:
-		animated_sprite_2d.play("idle")
+		if !falling:
+			animated_sprite_2d.play("idle")
 	
 	move_and_slide()
