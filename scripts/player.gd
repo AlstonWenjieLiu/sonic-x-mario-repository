@@ -5,12 +5,15 @@ extends CharacterBody2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -475.0
+var falling = false
+var going_up = false
 
 func _ready() -> void:
 	animated_sprite_2d.flip_h = true;
 
-func _procress():
-	pass
+func _process(delta):
+	falling = velocity.y > 0
+	going_up = velocity.y < 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
