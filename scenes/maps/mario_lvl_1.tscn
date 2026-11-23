@@ -11949,3 +11949,4 @@ sources/0 = SubResource("TileSetAtlasSource_asa13")
 [node name="TileMap" type="TileMap" parent="." unique_id=1707440208]
 tile_set = SubResource("TileSet_aot8l")
 format = 2
+layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, -262139, 196608, 2, -262138, 262144, 2, -262137, 327680, 2, -65530, 393216, 4, -131066, 393216, 4, -196602, 393216, 3, -196606, 131072, 0)
