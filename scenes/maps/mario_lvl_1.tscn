@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8ll4a48ftp57"]
 
 [ext_resource type="Texture2D" uid="uid://b50osabqpa8br" path="res://assets/sprites/worlds/smb1/tileset.png" id="1_yufvv"]
+[ext_resource type="PackedScene" uid="uid://bq65ohyvuyyal" path="res://scenes/mario.tscn" id="2_asa13"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asa13"]
 texture = ExtResource("1_yufvv")
@@ -11945,8 +11946,12 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_asa13")
 
 [node name="mario_lvl_1" type="Node2D" unique_id=152705921]
+position = Vector2(22, 621)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1707440208]
 tile_set = SubResource("TileSet_aot8l")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, -262139, 196608, 2, -262138, 262144, 2, -262137, 327680, 2, -65530, 393216, 4, -131066, 393216, 4, -196602, 393216, 3, -196606, 131072, 0)
+
+[node name="Player" parent="." unique_id=2057245359 instance=ExtResource("2_asa13")]
+position = Vector2(22, -19)
