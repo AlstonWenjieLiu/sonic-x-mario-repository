@@ -1,4 +1,5 @@
 extends Node
+
 @onready var sonic_scene_path = $"../Player"
 @onready var mario_scene_path = $"../Player2"
 @onready var current_character = sonic_scene_path
