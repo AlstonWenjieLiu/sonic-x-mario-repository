@@ -2,14 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://b50osabqpa8br" path="res://assets/sprites/worlds/smb1/tileset.png" id="1_yufvv"]
 [ext_resource type="PackedScene" uid="uid://bq65ohyvuyyal" path="res://scenes/mario.tscn" id="2_asa13"]
+[ext_resource type="PackedScene" uid="uid://dqpwx25827a7c" path="res://scenes/player.tscn" id="3_yjku3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_asa13"]
 texture = ExtResource("1_yufvv")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -215,8 +219,11 @@ separation = Vector2i(1, 1)
 1:2/0 = 0
 2:2/0 = 0
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:2/0 = 0
 7:2/0 = 0
 8:2/0 = 0
@@ -11943,6 +11950,7 @@ separation = Vector2i(1, 1)
 101:116/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_aot8l"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_asa13")
 
 [node name="mario_lvl_1" type="Node2D" unique_id=152705921]
@@ -11955,3 +11963,9 @@ layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 65536, 0, 2, 65536, 0, 3, 6
 
 [node name="Player" parent="." unique_id=2057245359 instance=ExtResource("2_asa13")]
 position = Vector2(22, -19)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=795549988]
+limit_smoothed = true
+
+[node name="Player2" parent="." unique_id=1294250666 instance=ExtResource("3_yjku3")]
+position = Vector2(22, -38)
