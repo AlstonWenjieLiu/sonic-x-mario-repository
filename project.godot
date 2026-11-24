@@ -19,6 +19,10 @@ config/icon="uid://b4utgt8j1bp12"
 
 buses/default_bus_layout="uid://jx82vl5ivt2g"
 
+[autoload]
+
+LvlSwitcher="*uid://8fv12aqps1h1"
+
 [input]
 
 jump={
